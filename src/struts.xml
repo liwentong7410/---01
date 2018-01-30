@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<include file="config/struts-goods.xml"></include>
+
+	<package name="default" namespace="/" extends="struts-default">
+		<!-- 全局result -->
+		<global-results>
+			<result name="addCar">/addCar.jsp</result>
+		</global-results>
+		
+		
+		<!-- action标签主要用来告诉过滤器，它需要调用 哪个类中的哪个方法来处理请求 -->
+		
+		
+			<!-- rusult中 type=""  默认不写是转发，或者参数dispatcher也是转发           参数为redirect，重定向 -->
+		<action name="addCar" method="addCar" class="com.hwua.action.AddCarAction">
+			<!-- <result name="user_result" type="">/register.jsp</result> -->
+		</action>
+		
+		
+		<!-- <default-action-ref name="index"></default-action-ref>
+		
+		<global-results>
+			<result name="error">/error.jsp</result>
+			<result name="login">/login.jsp</result>
+		</global-results>
+		
+		<action name="hello" class="com.oaec.action.HelloStruts">
+			<result name="success" type="chain">index</result>
+		</action>
+		
+		<action name="index">
+			<result>/welcome.jsp</result>
+		</action>
+		
+		<action name="user_*" method="{1}" class="com.oaec.action.UserAction">
+			<result>/welcome.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action> -->
+	
+	</package>
+    
+    <!-- <constant name="struts.action.extension" value="htm"></constant> -->
+
+</struts>

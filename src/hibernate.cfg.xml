@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.username">amazon</property>
+		<property name="hibernate.connection.password">amazon</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+		<!-- 自动更新表结构 -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- 打印sql语句 -->
+		<property name="show_sql">true</property>
+		<!-- 配置映射文件 -->
+		<mapping resource="com/hwua/bean/Car.xml"/>
+	</session-factory>
+</hibernate-configuration>
